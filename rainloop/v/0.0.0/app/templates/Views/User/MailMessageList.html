@@ -152,16 +152,45 @@
 		<div class="b-message-list-wrapper">
 			<div class="second-toolbar thm-message-list-top-toolbar">
 				<div class="form-inline">
+					<!-- <button class="" type="button">
+						<i class="icon-search"></i>
+					</button> -->
 					<div class="input-append pull-right" data-bind="visible: allowSearch">
 						<div class="close-input-wrp">
 							<a class="close" data-bind="click: cancelSearch, visible: '' !== messageListSearchDesc()">&times;</a>
-							<input type="text" class="i18n span4 inputSearch" tabindex="-1" placeholder="Search" autocorrect="off" autocapitalize="off" data-i18n="[placeholder]SEARCH/MAIN_INPUT_PLACEHOLDER" data-bind="value: inputProxyMessageListSearch, onEnter: searchEnterAction, hasfocus: inputMessageListSearchFocus" />
+							<input type="text" class="i18n span4 inputSearch 123abc" tabindex="-1" placeholder="Search" autocorrect="off" autocapitalize="off" data-i18n="[placeholder]SEARCH/MAIN_INPUT_PLACEHOLDER" data-bind="value: inputProxyMessageListSearch, onEnter: searchEnterAction, hasfocus: inputMessageListSearchFocus" />
 						</div>
 						<a class="btn buttonMoreSearch" data-bind="visible: allowSearchAdv, click: advancedSearchClick">
 							<span class="caret"></span>
 						</a>
 					</div>
+
 					<i class="checkboxCkeckAll" data-bind="css: checkAll() ? (isIncompleteChecked() ? 'icon-checkbox-partial' : 'icon-checkbox-checked') : 'icon-checkbox-unchecked'"></i>
+				</div>
+				<div class="vicoders-search pull-right">
+					<p>Tìm kiếm nâng cao:</p>
+					<input type="text" class="form-control search-val" name="search-val" placeholder="Tìm Mã, Sổ, KH">
+					<select class="search-customerid" name="kieu" id="chonkieu">
+						<option value="1">1-Mã, Sổ, Tên KH</option>
+						<option value="2">2-Liệt kê sổ đọc</option>
+						<option value="3">3-Seri đồng hồ</option>
+						<option value="4">4-Địa chỉ KH</option>
+						<option value="5">5-Có hóa đơn</option>
+						<option value="6">6-Mã hóa đồng hồ</option>
+						<option value="7">7-Không hóa đơn</option>
+						<option value="8">8-Sản lượng</option>
+					</select>
+					<select class="search-block" name="khoi">
+						<option value="0">Toàn bộ</option>
+						<option value="1">Khối ghi thu 1</option>
+						<option value="2">Khối ghi thu 2</option>
+						<option value="3">Khối ghi thu 3</option>
+						<option value="4">Khối ghi thu 4</option>
+						<option value="5">Khối ghi thu 5</option>
+						<option value="6">Khối ghi thu 6</option>
+						<option value="7">Khối ghi thu TT</option>
+					</select>
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#search-result" data-bind="click: advancedExpandSearchClickGarung"><i class="icon-search"></i></button>
 				</div>
 			</div>
 			<div class="line-loading e-strip-animation" data-bind="visible: messageListCompleteLoadingThrottle"></div>

@@ -70,6 +70,8 @@ class MessageListMailBoxUserView extends AbstractViewNext
 	constructor() {
 		super();
 
+		this.allowExpandSearchGarung = !!Settings.capa(Capa.ExpandSearchGarung);
+
 		this.sLastUid = null;
 		this.bPrefetch = false;
 		this.emptySubjectValue = '';
@@ -1005,6 +1007,10 @@ class MessageListMailBoxUserView extends AbstractViewNext
 		{
 			showScreenPopup(require('View/Popup/AdvancedSearch'), [this.mainMessageListSearch()]);
 		}
+	}
+	advancedExpandSearchClickGarung() {
+		showScreenPopup(require('View/Popup/ExpandSearch'), [this.mainMessageListSearch()]);
+		console.log('ok');
 	}
 
 	quotaTooltip() {

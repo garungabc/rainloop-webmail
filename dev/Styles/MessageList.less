@@ -47,6 +47,10 @@ html.rl-no-preview-pane {
 
 	.inputSearch {
 		width: 258px;
+	    /*width: 100%;*/
+	}
+	.search-option {
+		width: 30%;
 	}
 
 	.btn.buttonMoreSearch {
@@ -73,7 +77,8 @@ html.rl-no-preview-pane {
 		top: 0;
 		right: 0;
 		left: 0;
-		height: 29px;
+		/*height: 29px;*/
+		height: 95px;
 		padding: 10px 8px 10px 11px;
 		z-index: 101;
 		white-space: nowrap;
@@ -108,7 +113,8 @@ html.rl-no-preview-pane {
 	}
 
 	.toolbarDelimiter {
-		top: 49px;
+		/*top: 49px;*/
+		top: 0px;
 	}
 
 	.footerDelimiter {
@@ -117,14 +123,16 @@ html.rl-no-preview-pane {
 
 	.b-content {
 		position: absolute;
-		top: 50px;
+		/*top: 50px;*/
+		top: 115px;
 		bottom: 45px;
 		left: 0;
 		right: 0;
 		padding: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
-		z-index: 101;
+		/*z-index: 101;*/
+		z-index: -1;
 
 		box-sizing: border-box;
 
@@ -636,4 +644,24 @@ html.rl-mobile {
 	#rl-sub-left .messageList .inputSearch {
 		width: 160px !important;
 	}
+}
+
+/* ==== garung ===== */
+.vicoders-search {
+    padding-top: 5px;
+	.search-val {
+		width: 26%;
+	}
+	.search-customerid {
+		width: 30%;
+	}
+	.search-block {
+		width: 30%;
+	}
+	/*#search-result.modal.fade.in {
+		top: 100%;
+	}
+*/	/*.modal-backdrop {
+		display: none;
+	}*/
 }
